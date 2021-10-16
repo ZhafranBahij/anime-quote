@@ -1,6 +1,4 @@
-import chino from "../img/Chinochan.jpg";
-import rize from "../img/Rizesan.jpg";
-import syaro from "../img/Syaro.jpg";
+import Datas from "./dataCarousel.js";
 
 const Carousel = () => {
   return (
@@ -10,27 +8,15 @@ const Carousel = () => {
       data-bs-ride="carousel"
     >
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src={chino} class="d-block w-100" alt="Chino" />
-          <div class="carousel-caption d-none d-sm-block bg-danger bg-opacity-75">
-            <h5>Welcome Back, Master!</h5>
-            <p>I hope you have more energy to do some work today</p>
+        {Datas.map((data) => (
+          <div class={data.class}>
+            <img src={data.img} class="d-block w-100" alt={data.name} />
+            <div class="carousel-caption d-none d-sm-block bg-danger bg-opacity-75">
+              <h5>{data.call}</h5>
+              <p>{data.call2}</p>
+            </div>
           </div>
-        </div>
-        <div class="carousel-item">
-          <img src={rize} class="d-block w-100" alt="Rize" />
-          <div class="carousel-caption d-none d-sm-block bg-danger bg-opacity-75">
-            <h5>Are You Tired, Master?</h5>
-            <p>there are more quotes below this picture.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src={syaro} class="d-block w-100" alt="Syaro" />
-          <div class="carousel-caption d-none d-sm-block bg-danger bg-opacity-75">
-            <h5>Wink</h5>
-            <p>Do you need more sweet thing?</p>
-          </div>
-        </div>
+        ))}
       </div>
       <button
         class="carousel-control-prev"

@@ -34,11 +34,29 @@ const Fetch = () => {
   } else {
     return (
       <ul>
-        {items.map((item) => (
-          <li key={item.anime}>
-            {item.anime} {item.character}
-          </li>
-        ))}
+        <div class="container">
+          <div id="rower" class="row gy-3 justify-content-around">
+            {items.map((item) => (
+              <div
+                class="p-2 card text-danger text-opacity-75 border-danger col-lg-3
+                col-md-4
+                col-sm-6
+                col-xs-12"
+                data-aos="flip-right"
+                data-aos-easing="ease-out-cubic"
+              >
+                <div class="card-body">
+                  <h4 class="card-title text-center mb-2 ">{item.character}</h4>
+                  <h6 class="card-subtitle mb-4 text-center">
+                    <small>{item.anime}</small>
+                  </h6>
+                  <hr />
+                  <cite class="card-text mb-5">{item.quote}</cite>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </ul>
     );
   }

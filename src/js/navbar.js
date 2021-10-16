@@ -24,14 +24,17 @@ const ModalAbout = () => {
             ></button>
           </div>
           <div class="modal-body text-danger text-opacity-75">
-            This web is for you who want get some motaviation in the life from
-            anime. The quotes get from
-            <a href="https://animechan.vercel.app/guide">animechan</a> and
-            wallpaper from
+            This web is for you who want get some motivation in the life from
+            anime. <br /> The quotes get from{" "}
+            <a href="https://animechan.vercel.app/guide">animechan</a> <br />
+            Wallpaper from{" "}
             <a href="https://pngtree.com/free-backgrounds">
               free background photos from pngtree.com
-            </a>
-            . I hope you enjoy it <br />
+            </a>{" "}
+            <br />
+            Chino and Her friend wallpaper from{" "}
+            <a href="https://gochiusa.com/bloom/">Gochiusa</a> <br />
+            I hope you enjoy it <br />
             ＼(＾▽＾)／
           </div>
         </div>
