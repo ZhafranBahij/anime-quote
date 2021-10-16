@@ -1,25 +1,20 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { react, useState, useEffect } from "react";
+import Fetch from "./js/fetch.js";
+import Navbar from "./js/navbar.js";
+import Carousel from "./js/carousel.js";
 
-function App() {
+const Fusion = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Carousel />
+      <Fetch />
     </div>
   );
+};
+
+function App() {
+  return <Fusion />;
 }
 
 export default App;
