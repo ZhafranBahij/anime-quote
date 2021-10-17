@@ -1,3 +1,5 @@
+import { react, useState, useEffect } from "react";
+
 const ModalAbout = () => {
   return (
     <div
@@ -77,7 +79,21 @@ const ModalTeam = () => {
   );
 };
 
-const MainNavbar = () => {
+const MainNavbar = (props) => {
+  const [charaLink, setCharaLink] = useState("");
+
+  const handleChange = (event) => {
+    // console.log(charaLink);
+    setCharaLink(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    // console.log(charaLink);
+    event.preventDefault();
+    // console.log(`You write ${charaLink}`);
+    props.addLink(charaLink);
+  };
+
   return (
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-opacity-50">
       <div class="container-fluid">
@@ -118,16 +134,29 @@ const MainNavbar = () => {
               </a>
             </li>
           </ul>
+          <form class="d-flex" onSubmit={handleSubmit}>
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="anime title"
+              aria-label="Search"
+              onChange={handleChange}
+              value={charaLink}
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </div>
     </nav>
   );
 };
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div>
-      <MainNavbar />
+      <MainNavbar addLink={props.addLink} />
       <ModalAbout />
       <ModalTeam />
     </div>

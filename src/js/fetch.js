@@ -1,7 +1,7 @@
 import { react, useState, useEffect } from "react";
 
 //* Create a fetch with react
-const Fetch = () => {
+const Fetch = (props) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
@@ -10,7 +10,8 @@ const Fetch = () => {
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
-    fetch("https://animechan.vercel.app/api/quotes")
+    console.log(props.linkToFetch);
+    fetch(props.linkToFetch)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -25,7 +26,7 @@ const Fetch = () => {
           setError(error);
         }
       );
-  }, []);
+  });
 
   if (error) {
     return <div>Error: {error.message}</div>;
