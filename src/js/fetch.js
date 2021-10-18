@@ -5,13 +5,16 @@ const Fetch = (props) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
+  const [url, setUrl] = useState(props.linkToFetch);
 
   // Note: the empty deps array [] means
   // this useEffect will run once
   // similar to componentDidMount()
+
   useEffect(() => {
-    console.log(props.linkToFetch);
-    fetch(props.linkToFetch)
+    setUrl(props.linkToFetch);
+    console.log(url);
+    fetch(url)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -26,7 +29,7 @@ const Fetch = (props) => {
           setError(error);
         }
       );
-  });
+  }, [props]);
 
   if (error) {
     return <div>Error: {error.message}</div>;

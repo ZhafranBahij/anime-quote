@@ -28,7 +28,7 @@ const Fusion = () => {
       setLinkToFetch("https://animechan.vercel.app/api/quotes");
     } else {
       setLinkToFetch(
-        `'https://animechan.vercel.app/api/quotes/anime?title=${link}'`
+        `https://animechan.vercel.app/api/quotes/anime?title=${link}`
       );
     }
     // console.log(linkToFetch);
