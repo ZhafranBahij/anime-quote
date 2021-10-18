@@ -5,14 +5,20 @@ const Fetch = (props) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-  const [url, setUrl] = useState(props.linkToFetch);
+  const [url, setUrl] = useState("https://animechan.vercel.app/api/quotes");
 
   // Note: the empty deps array [] means
   // this useEffect will run once
   // similar to componentDidMount()
 
   useEffect(() => {
-    setUrl(props.linkToFetch);
+    if (props.link === "") {
+      setUrl("https://animechan.vercel.app/api/quotes");
+    } else {
+      setUrl(
+        `https://animechan.vercel.app/api/quotes/anime?title=${props.link}`
+      );
+    }
     console.log(url);
     fetch(url)
       .then((res) => res.json())
@@ -29,7 +35,7 @@ const Fetch = (props) => {
           setError(error);
         }
       );
-  }, [props]);
+  }, [props, url]);
 
   if (error) {
     return <div>Error: {error.message}</div>;

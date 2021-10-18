@@ -91,7 +91,7 @@ const MainNavbar = (props) => {
     // console.log(charaLink);
     event.preventDefault();
     // console.log(`You write ${charaLink}`);
-    props.addLink(charaLink);
+    props.addLink(charaLink.replace(" ", "%20"));
   };
 
   return (

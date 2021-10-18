@@ -38,7 +38,7 @@ const Fusion = () => {
     <div>
       <Navbar addLink={addLink} />
       <Carousel />
-      <Fetch linkToFetch={linkToFetch} />
+      <Fetch link={link} />
       <Footer />
     </div>
   );
