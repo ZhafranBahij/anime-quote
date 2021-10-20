@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/anime-quote/static/css/main.594616e1.chunk.css",
+    "main.js": "/anime-quote/static/js/main.559cf4e0.chunk.js",
+    "main.js.map": "/anime-quote/static/js/main.559cf4e0.chunk.js.map",
+    "runtime-main.js": "/anime-quote/static/js/runtime-main.3ff46b18.js",
+    "runtime-main.js.map": "/anime-quote/static/js/runtime-main.3ff46b18.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/anime-quote/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.178ba409.chunk.js": "/anime-quote/static/js/2.178ba409.chunk.js",
+    "static/js/2.178ba409.chunk.js.map": "/anime-quote/static/js/2.178ba409.chunk.js.map",
+    "static/js/3.23ed3a7f.chunk.js": "/anime-quote/static/js/3.23ed3a7f.chunk.js",
+    "static/js/3.23ed3a7f.chunk.js.map": "/anime-quote/static/js/3.23ed3a7f.chunk.js.map",
+    "index.html": "/anime-quote/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/anime-quote/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.594616e1.chunk.css.map": "/anime-quote/static/css/main.594616e1.chunk.css.map",
+    "static/js/2.178ba409.chunk.js.LICENSE.txt": "/anime-quote/static/js/2.178ba409.chunk.js.LICENSE.txt",
+    "static/media/Chinochan.3697f49c.jpg": "/anime-quote/static/media/Chinochan.3697f49c.jpg",
+    "static/media/Rizesan.484ae56b.jpg": "/anime-quote/static/media/Rizesan.484ae56b.jpg",
+    "static/media/Syaro.0b9bd234.jpg": "/anime-quote/static/media/Syaro.0b9bd234.jpg",
+    "static/media/App.css": "/anime-quote/static/media/sakura flower.ea039055.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ff46b18.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.178ba409.chunk.js",
+    "static/css/main.594616e1.chunk.css",
+    "static/js/main.559cf4e0.chunk.js"
+  ]
+}
